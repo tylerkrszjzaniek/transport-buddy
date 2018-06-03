@@ -74,6 +74,11 @@ h1 {
     color:#fff;
 }
 
+#calculator {
+  background-color: white;
+  width: 100%;
+}
+
 @media (max-width: 714px) {
   body {
     padding-top: 56px;

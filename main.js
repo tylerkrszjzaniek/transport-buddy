@@ -41,38 +41,78 @@ document.getElementById('clockin').addEventListener("click",
       for(i; i< l; i++){
         displayItems[i].style.display = "none";
       }
+      document.getElementById("header").textContent = "Clock in/out";
 }
 
 
 );
 
 document.getElementById('trips').addEventListener("click",
-    function displayClock(){
+    function displayTrip(){
       var displayItems = document.querySelectorAll(".portfolio-item"),
           i=0,
           l = displayItems.length;
       for(i; i< l; i++){
         displayItems[i].style.display = "none";
       }
+      document.getElementById("header").textContent = "Trip Manager";
 }
 
 
 );
 
 document.getElementById('pricing').addEventListener("click",
-    function displayClock(){
+    function displayPrice(){
       var displayItems = document.querySelectorAll(".portfolio-item"),
           i=0,
           l = displayItems.length;
       for(i; i< l; i++){
         displayItems[i].style.display = "none";
       }
+
+      const priceDisplay = `
+        <div id = "calculator">
+          <h4> Enter your details below</h4>
+            <p>  </p>
+              <form action="" method="post">
+                <fieldset>
+                <legend></legend>
+   
+                </fieldset>
+<div class="number ">
+  <label><input type="number" value="" ></label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">After 5PM?</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Before 7AM?</label>
+</div>
+<div class="checkbox ">
+  <label><input type="checkbox" value="" >Weekend?</label>
+</div>
+<div class="checkbox ">
+  <label><input type="checkbox" value="" >Hospital Discharge or one-way?</label>
+</div>
+<div id="checkboxO2">
+  <label><input type="checkbox" value="" >Oxygen Used?</label>
+</div>
+              </form>
+            </div>
+      `
+
       document.getElementById("header").textContent = "Price Calculator";
-      
+      document.getElementById("newcontent").innerHTML = priceDisplay;
+if(document.getElementById('checkboxO2').checked){
+
+}
+
 }
 
 
 );
+
+
 
 document.getElementById('tutorials').addEventListener("click",
     function displayClock(){
@@ -82,7 +122,7 @@ document.getElementById('tutorials').addEventListener("click",
       for(i; i< l; i++){
         displayItems[i].style.display = "none";
       }
-
+document.getElementById("header").textContent = "Tutorials and Checklists";
 }
 
 
