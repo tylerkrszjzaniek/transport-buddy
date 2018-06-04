@@ -77,6 +77,36 @@ h1 {
 #calculator {
   background-color: white;
   width: 100%;
+  margin: 0 10% 0 10%;
+  border: 3px solid #8cc63f
+}
+
+#calcClick {
+  width:100%;
+}
+
+#costDisplay {
+  margin-left: 45%;
+  border: 5px solid black;
+  font-size: 5vw;
+  width: 15%;
+  text-align: center;
+  position: fixed;
+  margin-top: -13%;
+}
+
+#costarea {
+margin-left: 48%;
+position: fixed;
+margin-top: -16%;
+font-size: 2vw;
+
+}
+
+#costshow {
+  position: fixed;
+  margin-left: 48%;
+  margin-top: -3%;
 }
 
 @media (max-width: 714px) {
