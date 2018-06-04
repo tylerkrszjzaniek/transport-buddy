@@ -101,6 +101,8 @@ document.getElementById( "trips" ).addEventListener( "click",
             <select id="dropdown-menu"></select>
             </div>
         <div id="searchbar">
+      <h6>  Search for an address to update the map in real-time </h6>
+        
           <input type="text" name="searchaddress" id="search" value="" placeholder="Enter Address" data-role="none">
           </div>
         <div id="mapouter">
@@ -133,7 +135,7 @@ document.getElementById( "trips" ).addEventListener( "click",
             } );
         document.getElementById( "searchbar" ).addEventListener( "input",
             function searchMapDisplay(){
-                var addressSearch = document.getElementById( "searchbar" ).value;
+                var addressSearch = document.getElementById( "search" ).value;
 
                 document.getElementById( "gmap_canvas_display" ).src = "https://maps.google.com/maps?q=" + addressSearch + "&t=&z=13&ie=UTF8&iwloc=&output=embed";
             } );

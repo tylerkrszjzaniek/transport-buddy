@@ -116,11 +116,15 @@ font-size: 2vw;
 #addressSelector {
   position: absolute;
   margin-left: 5%;
-  margin-top: 2%;
+  margin-top: 5%;
+}
+
+#header {
+  background-color: #8cc63f;
 }
 
 #searchbar {
-  margin-top: 25%;
+  margin-top: 20%;
   position: absolute;
   width: 50%;
   margin-left: 5%;
@@ -129,6 +133,9 @@ h4 {
   color:white;
 }
 
+h6 {
+  color: white;
+}
 @media (max-width: 714px) {
   body {
     padding-top: 56px;
