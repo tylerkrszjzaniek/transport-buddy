@@ -6,6 +6,27 @@ var roundTripCost = 70;
 var weekendCost = 35;
 var oxygenCost = 14;
 var hospitalDischargeCost = 25;
+var frequentLocations = [
+    "106 Four Seasons Shopping Center",
+    "Barnes Jewish - Central West End",
+    "Barnes Jewish - St. Peters",
+    "Breeze Park",
+    "Delmar Gardens - Chesterfield",
+    "Delmar Gardens - O'Fallon",
+    "Friendship Village - Chesterfield",
+    "Mason Pointe",
+    "Meramec Bluffs",
+    "Mercy Hospital - St. Louis",
+    "Missouri Baptist Medical Center",
+    "Parc Provence",
+    "Sherbrooke Village",
+    "St. Anthony's Medical Center",
+    "St. Luke's Hospital - Chesterfield",
+    "Sunrise - Des Peres",
+    "Villages of St. Peters",
+];
+
+
 // date and clock function
 
 function startTime(){
@@ -72,10 +93,51 @@ document.getElementById( "trips" ).addEventListener( "click",
             displayItems[i].style.display = "none";
         }
         document.getElementById( "header" ).textContent = "Trip Manager";
-    }
 
 
-);
+        const mapDisplay = `
+            <div id="addressSelector">
+            <h4> Frequently Visited Locations </h4>
+            <select id="dropdown-menu"></select>
+            </div>
+        <div id="searchbar">
+          <input type="text" name="searchaddress" id="search" value="" placeholder="Enter Address" data-role="none">
+          </div>
+        <div id="mapouter">
+          <div id="gmap_canvas">
+            <iframe width="500" height="410" id="gmap_canvas_display" src="https://maps.google.com/maps?q=106 four seasons shopping center&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+
+          </div>
+            <style>.mapouter{text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+            </style>
+        </div>
+
+
+      `;
+
+        document.getElementById( "newcontent" ).innerHTML = mapDisplay;
+        var dropdown = document.getElementById( "dropdown-menu" );
+
+
+        for( let x = 0; x < frequentLocations.length; x++ ){
+            var frequent = frequentLocations[x];
+
+            dropdown.innerHTML += "<option value=\"" + frequent + "\">" + frequent + "</option>" ;
+        }
+        document.getElementById( "dropdown-menu" ).addEventListener( "change",
+            function changeMapDisplay(){
+                var dropdownValue = document.getElementById( "dropdown-menu" ).value;
+
+                document.getElementById( "gmap_canvas_display" ).src = "https://maps.google.com/maps?q=" + dropdownValue + "&t=&z=13&ie=UTF8&iwloc=&output=embed";
+            } );
+        document.getElementById( "searchbar" ).addEventListener( "input",
+            function searchMapDisplay(){
+                var addressSearch = document.getElementById( "searchbar" ).value;
+
+                document.getElementById( "gmap_canvas_display" ).src = "https://maps.google.com/maps?q=" + addressSearch + "&t=&z=13&ie=UTF8&iwloc=&output=embed";
+            } );
+    } );
 
 document.getElementById( "pricing" ).addEventListener( "click",
     function displayPrice(){
@@ -90,8 +152,8 @@ document.getElementById( "pricing" ).addEventListener( "click",
         const priceDisplay = `
 
         <div id = "calculator">
-          <h4> Enter your details below</h4>
-            
+          <h5> Enter your details below</h5>
+
                 <div class="number">
                   Total Mileage <input type="number" id="mileage" min="0">
                 </div>

@@ -109,6 +109,26 @@ font-size: 2vw;
   margin-top: -3%;
 }
 
+#mapouter {
+  margin-left: 45%;
+  border: 5px solid white;
+}
+#addressSelector {
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+#searchbar {
+  margin-top: 25%;
+  position: absolute;
+  width: 50%;
+  margin-left: 5%;
+}
+h4 {
+  color:white;
+}
+
 @media (max-width: 714px) {
   body {
     padding-top: 56px;
