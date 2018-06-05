@@ -3,7 +3,9 @@ body {
   background-color: #343a40;
 }
 
-
+#header {
+  background-color: #8cc63f;
+}
 
 .portfolio-item {
   margin-bottom: 30px;
@@ -119,9 +121,7 @@ font-size: 2vw;
   margin-top: 5%;
 }
 
-#header {
-  background-color: #8cc63f;
-}
+
 
 #searchbar {
   margin-top: 20%;
@@ -136,6 +136,7 @@ h4 {
 h6 {
   color: white;
 }
+
 @media (max-width: 714px) {
   body {
     padding-top: 56px;
@@ -162,4 +163,60 @@ h6 {
   .main{
     margin-top: -6%;
   }
+
+  #mapouter {
+    width: 95%;
+    margin-top: -2%;
+    margin-left: 2.5%;
+    border: none;
+  }
+#gmap_canvas {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: -2%;
+}
+
+  #gmap_canvas_display {
+    width:95%;
+    margin-left: 2.5%;
+    margin-top: 0%;
+  }
+  #addressSelector {
+    display: block;
+    margin-left: 7%;
+    margin-top: 89%;
+  }
+#dropdown-menu{
+  width: 55%;
+}
+  #searchbar {
+      display: block;
+      margin-top: 89%;
+      margin-left: 45%;
+      width: 80%
+  }
+
+  #search {
+    width: 60%;
+    height: 10%;
+    margin-left: 0%;
+  }
+#freqhead {
+  font-size: 2.5vw;
+  margin-left: 0%;
+
+}
+
+h6 {
+  font-size: 2vw;
+}
+
+#costarea {
+  font-size: 5vw;
+  margin-top: -25%;
+}
+
+#costDisplay {
+  margin-left: 52%;
+}
 }

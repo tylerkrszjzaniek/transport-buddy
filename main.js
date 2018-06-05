@@ -92,17 +92,17 @@ document.getElementById( "trips" ).addEventListener( "click",
         for( i; i < l; i++ ){
             displayItems[i].style.display = "none";
         }
-        document.getElementById( "header" ).textContent = "Trip Manager";
+        document.getElementById( "header" ).textContent = "Trip Planner";
 
 
         const mapDisplay = `
             <div id="addressSelector">
-            <h4> Frequently Visited Locations </h4>
+            <h4 id="freqhead"> Frequently Visited Locations </h4>
             <select id="dropdown-menu"></select>
             </div>
         <div id="searchbar">
       <h6>  Search for an address to update the map in real-time </h6>
-        
+
           <input type="text" name="searchaddress" id="search" value="" placeholder="Enter Address" data-role="none">
           </div>
         <div id="mapouter">
