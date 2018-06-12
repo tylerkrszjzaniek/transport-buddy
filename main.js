@@ -29,6 +29,45 @@ var frequentLocations = [
 
 // date and clock function
 
+// contacts displays
+document.getElementById( "contacts" ).addEventListener( "click",
+    function contactsDisplay(){
+        const contactlist = `
+        <div id="contactImageContainer">
+          <img src="/assets/robyn.jpg">
+          <br>
+          <img src="/assets/christa.jpg">
+                <br>
+          <img src="/assets/tyler.jpg">
+        </div>
+
+        <div class="contactInfoContainer">
+            <h3> Robyn Tweedy </h3>
+              <h4> CEO </h4>
+                <h6> robyn@ridewithsummit.com </h6>
+                <h6> 314 - 239 - 6477 </h6>
+                <br>
+                <br>
+                <br>
+            <h3> Christa Tweedy </h3>
+              <h4> COO & Scheduler </h4>
+                <h6> christa@ridewithsummit.com </h6>
+                <h6> 314 - 952 - 9437 </h6>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+            <h3> Tyler Krszjzaniek </h3>
+              <h4> Lead Driver & Webmaster </h4>
+                <h6> tyler@ridewithsummit.com </h6>
+                <h6> 608 - 963 - 4975 </h6>
+        </div>
+      `;
+
+        document.getElementById( "newcontent" ).innerHTML = contactlist;
+    }
+);
+
 
 // display features on item click
 document.getElementById( "trips" ).addEventListener( "click",
@@ -241,6 +280,54 @@ document.getElementById( "tutorials" ).addEventListener( "click",
             displayItems[i].style.display = "none";
         }
         document.getElementById( "header" ).textContent = "Tutorials and Checklists";
+
+        const tutorialDisplay = `
+          <div id="tutorial">
+            <div id="tutorialOptions">
+              <div id="liftOperation">
+                Lift Operation
+              </div>
+              <div id="interiorChecklist">
+                Interior Cleaning Checklist
+              </div>
+              <div id="exteriorChecklist">
+                Exterior Cleaning Checklist
+              </div>
+              </div>
+            <div id="contentContainer"
+            </div>
+          </div>
+        `;
+
+        document.getElementById( "newcontent" ).innerHTML = tutorialDisplay;
+        document.getElementById( "liftOperation" ).addEventListener( "click",
+            function liftOperationDisplay(){
+                const liftDisplay = `
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  <img src="/assets/tutorials/interlockbrake.jpg">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  <img src="/assets/tutorials/liftunfold.jpg">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  <img src="/assets/tutorials/liftfold.jpg">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  <img src="/assets/tutorials/chairlift.jpg">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  <img src="/assets/tutorials/liftup.jpg">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  <img src="/assets/tutorials/chairstrap.jpg">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  <img src="/assets/tutorials/chairbelt.jpg">
+
+                `;
+
+                document.getElementById( "liftOperation" ).addEventListener( "click",
+                    function liftContentDisplay(){
+                        document.getElementById( "contentContainer" ).innerHTML = liftDisplay;
+                    }
+
+                );
+            }
+        );
     }
 
 

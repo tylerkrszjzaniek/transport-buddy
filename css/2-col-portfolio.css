@@ -175,6 +175,64 @@ h6 {
   color: white;
 }
 
+#tutorialOptions {
+  background-color: white;
+  font-size: 1.5vw;
+  margin-left: 1%;
+  color: black;
+  position: absolute;
+}
+
+#tutorialOptions > div {
+  border: 2px solid black;
+}
+
+#tutorialOptions > div:hover{
+  color: #8cc63f;
+}
+
+#contentContainer {
+
+  margin-left: 23%;
+  background-color: white;
+  color: black;
+  width: 50%;
+}
+
+
+
+#contentContainer img {
+  width: 50%;
+  transform: rotate(90deg);
+  margin-left: 100%;
+  margin-top: -22%;
+
+}
+
+
+#contactImageContainer {
+  display: flex;
+  margin-left: 20%;
+  color:white;
+flex-direction: column;
+padding-bottom: 10%;
+}
+
+#contactImageContainer img {
+  width: 25%;
+}
+
+.contactInfoContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40%;
+  margin-top: -65%;;
+}
+.contactInfoContainer h3 , h4 , h6 {
+  z-index: 1;
+  color: white;
+}
+
 @media (max-width: 714px) {
   body {
     padding-top: 56px;
